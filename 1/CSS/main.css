@@ -27,20 +27,9 @@ body{
     text-align: center;
     padding: 20px 10px 10px;
     transform: scale(1);
-    transition: all .02s ease ;
+    transition: all .05s ease ;
     background-color: rgba(0,0,0,0.2);
     box-shadow: 0 0 3px rgba(0,0,0,0.6);
-    /* border: .4rem solid black;
-    border-radius: .5rem;
-    margin: 1rem;
-    font-size: 1.5rem;
-    padding: 1rem .5rem;
-    transition: all .07s ease;
-    width: 10rem;
-    text-align: center;
-    color: white;
-    background: rgba(0,0,0,0.4);
-    text-shadow: 0 0 .5rem black; */
 }
 .keys .key kbd{
     font-size: 2.5EM;

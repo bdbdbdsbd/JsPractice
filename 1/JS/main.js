@@ -16,9 +16,10 @@ function playSound(e) {
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
     const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
     if (!audio) return;
-    if(key.classList[1]!='playing'){
+    // 在音乐还没播放完时就按下，按下一次按键，会出现常亮的效果
+    if(audio.currentTime>=0.07 || audio.currentTime==0){
         key.classList.add('playing');
+        audio.currentTime = 0;
+        audio.play();
     }
-    audio.currentTime = 0;
-    audio.play();
 }
