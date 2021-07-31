@@ -9,6 +9,14 @@ window.onload=function(){
 }
 function removeTransition(e) {
     // 当发生transitionend事件时，propertyName属性返回与转换关联的CSS属性的名称。
+    // 比如说
+    // main.js:12 border-bottom-color
+    // main.js:12 border-left-color
+    // main.js:12 border-right-color
+    // main.js:12 border-top-color
+    // main.js:12 box-shadow
+    // main.js:12 transform
+    console.log(e.propertyName);
     if (e.propertyName !== 'transform') return;
     e.target.classList.remove('playing');
 }
