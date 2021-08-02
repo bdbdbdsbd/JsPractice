@@ -58,7 +58,7 @@ inventors.sort((a,b) => a.year<b.year?1:-1);
 console.log("按照生日从幼到长排序");
 console.log(inventors);
 
-//4.这些人活了多久
+//4.这些人一共活了多久
 console.log("这些人活了多久");
 var totalYears1 = 0;
 for (let index = 0; index < inventors.length; index++) {
@@ -70,3 +70,10 @@ var totalYears2 = 0;
 // arr.reduce(callback(accumulator, currentValue[, index[, array]])[, initialValue])
 totalYears2 = inventors.reduce((total,inventor) => {return total+(inventor.passed-inventor.year);},0);
 console.log(totalYears2);
+
+//5. 根据活着的年份来排序
+console.log("根据活着的年份来排序");
+inventors.sort( (a,b) => (a.passed-a.year)< (b.passed-b.year)?1:-1 );
+console.log(inventors);
+
+//6.
