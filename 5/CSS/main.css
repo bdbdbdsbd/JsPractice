@@ -79,3 +79,10 @@ body{
     font-size: 100px;
     transition: 0.5s;
 }
+
+/* 当页面小于960px的时候执行它下面的CSS */
+@media only screen and (max-width: 600px) {
+    .part p {
+      font-size: 0.5em;
+    }
+  }
