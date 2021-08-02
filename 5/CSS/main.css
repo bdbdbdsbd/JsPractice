@@ -1,0 +1,86 @@
+/* 你想要设置的边框和内边距的值是包含在width内的。也就是说，如果你将一个元素的width设为100px，那么这100px会包含它的border和padding， */
+html {
+    box-sizing: border-box;
+    background: #ffc600;
+    font-family: 'helvetica neue';
+    font-size: 20px;
+    font-weight: 200;
+}
+body{
+    margin: 0;
+}
+/* *, *:before, *:after {
+    box-sizing: inherit;
+} */
+.main{
+    display: flex;
+    overflow: hidden;
+    min-height: 100vh;
+}
+.part{
+    flex: 1;
+    display: flex;
+    background: #6B0F9C;
+    box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
+    color: white;
+    text-align: center;
+    align-items: center;
+    /* Safari transitionend event.propertyName === flex */
+    /* Chrome + FF transitionend event.propertyName === flex-grow */
+    transition:
+      font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+      flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+      background 0.2s;
+    font-size: 20px;
+    background-size: cover;
+    background-position: center;
+}
+/* flex是flex-grow,flex-shrink,flex-basis3个属性结合在一起的缩写形式,后两个属性可选写 */
+/* 表示当子元素的空间小于父元素的空间时,如何处理剩余空间,
+默认值为0表示不占有剩余空间;
+当子元素都设置为1时表示平均分配剩余空间;
+当一个子元素为2其余子元素为1时为2的子元素占据的剩余空间比其他子元素多一倍;
+当一个子元素为1其余子元素为0,为1的子元素占据全局剩余空间 */
+.part > *{
+    flex: 1 0 auto;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+.part1{
+    background: url("../IMG/a.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    align-items: center;
+}
+.part2{
+    background: url("../IMG/b.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    align-items: center;
+}
+.part3{
+    background: url("../IMG/c.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.part4{
+    background: url("../IMG/d.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.part5{
+    background: url("../IMG/e.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.part p{
+    text-transform: uppercase;
+    font-family: 'Amatic SC', cursive;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-size: 2em;
+}
+
