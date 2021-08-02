@@ -76,4 +76,32 @@ console.log("根据活着的年份来排序");
 inventors.sort( (a,b) => (a.passed-a.year)< (b.passed-b.year)?1:-1 );
 console.log(inventors);
 
-//6.
+//6.访问网站https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+// list=document.querySelector(".mw-category")
+// link=[...list.querySelectorAll("a")]加括号就让这个nodelist成为map 也可以用Array.from(list.querySelectorAll("a"))
+// link.map(link => link.textContent).filter(streetName => streetName.includes('de'))
+
+//7.根据lastname来排序people
+// 别忘记加return
+people.sort((a,b) => {
+     [afirst,alast]= a.split(', ');
+     [bfirst,blast]= b.split(', ');
+     return afirst>bfirst ? 1 : -1;
+ });
+ console.log(people);
+
+// 8. 计算重复数据
+const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck', 'pogostick']; 
+// 大胆猜测，reduce就是以来这样的一个函数，有两个参数：统计值，有数组内的元素，
+// 最后是一个初始值
+// 并且依次遍历过去。
+const trans = data.reduce(
+    function(obj,item){
+        if(!obj[item]){
+            obj[item]=0
+        }
+        obj[item]++;
+        return obj;
+    },{}
+);
+console.log(trans);
