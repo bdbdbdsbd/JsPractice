@@ -34,10 +34,10 @@ body{
     padding: 0;
     list-style: none;
     height: 40px;
-    width: 200px;
+    width: 250px;
     line-height: 40px;
-    font-size: 20px;
-    color: lightgray;
+    font-size: 10px;
+    color: #262626;
     /* background-color: white; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
     padding: 10px;
@@ -64,4 +64,7 @@ body{
     transform: perspective(100px) rotateX(3deg) translateY(0px) scale(1.01);
     background: linear-gradient(to bottom,  #ffffff 0%,#EFEFEF 100%);
     z-index: -2;
+  }
+.hl{
+      background: lightblue;
   }
