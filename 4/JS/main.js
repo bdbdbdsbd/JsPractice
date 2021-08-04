@@ -83,6 +83,7 @@ console.log(inventors);
 
 //7.根据lastname来排序people
 // 别忘记加return
+console.log("根据lastname来排序people");
 people.sort((a,b) => {
      [afirst,alast]= a.split(', ');
      [bfirst,blast]= b.split(', ');
@@ -91,6 +92,7 @@ people.sort((a,b) => {
  console.log(people);
 
 // 8. 计算重复数据
+console.log("计算出现的次数");
 const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck', 'pogostick']; 
 // 大胆猜测，reduce就是以来这样的一个函数，有两个参数：统计值，有数组内的元素，
 // 最后是一个初始值

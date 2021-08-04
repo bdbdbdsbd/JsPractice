@@ -66,14 +66,17 @@ body{
 }
 .open{
     flex: 4;
+    transition: 0.5s;
 }
 .open p:nth-child(1){
     transform: translateY(0%);
     font-size: 50px;
+    transition: 0.5s;
 }
 .open p:nth-child(3){
     transform: translateY(0%);
     font-size: 50px;
+    transition: 0.5s;
 }
 .open p:nth-child(2){
     font-size: 100px;
