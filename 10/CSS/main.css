@@ -1,8 +1,36 @@
-h1{
-    text-align: center;
-    font-size: 3em;
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(241, 239, 239);
 }
-h3{
-    padding: 20px;
-    font-size: 1.5em;
+.main{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(219, 237, 248);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.main ul{
+    margin: 0 20px ;
+    padding: 0;
+}
+.main ul li{
+    width: 300px;
+    height: 50px;
+    list-style: circle;
+    font-size: 15px;
+    font-weight: 300;
+    border-bottom: 1px ghostwhite solid;
+    display: flex;
+}
+.main ul li p{
+    align-items: center;
+    justify-content: center;
+    /* 不要在这里乱加padding 和 margin */
+}
+.main ul li:last-child{
+    border-bottom:none;
 }
