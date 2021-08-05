@@ -39,3 +39,8 @@ playbutton.addEventListener("click",togglePlay);
 backbutton.forEach(bb => bb.addEventListener("click",skipp));
 inputr.forEach(inr =>inr.addEventListener("mousemove",handleRangeUpdate));
 lline.addEventListener("click",updateVideo);
+var mouseDown = false;
+// add this ,you can drag it
+lline.addEventListener("mousemove",(e) => {if(mouseDown){updateVideo(e);}});
+lline.addEventListener("mousedown",() => mouseDown = true);
+lline.addEventListener("mouseup",() => mouseDown = false);
