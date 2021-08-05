@@ -54,6 +54,7 @@ body{
 }
 .player .playCon .use input{
     width: 150px;
+    border: none;
 }
 .player .playCon .use button{
     background-color: rgba(0,0,0,0);
