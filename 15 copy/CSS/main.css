@@ -32,7 +32,7 @@ body{
     background-color: rgba(255, 255, 255, 0.7);
     /* width: 400px; */
     width: 400px;
-    /* height: 300px; */
+    height: 300px;
     margin: 30px;
     box-shadow: 0 0 2px 10px rgba(0, 0, 0, 0.3);
     padding: 5px 30px;
@@ -55,17 +55,41 @@ body{
     padding: 0;
     margin: 0;
 }
-.main .con .inputCon{
+.main .con .bu{
+    /* margin: 20px; */
+    /* float: left; */
+    /* vertical-align: top; */
+    /* line-height: 32px; */
     display: flex;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    position: relative;
+    margin-top: 15px;
 }
-.main .con .inputCon input[type="text"]{
-    flex:2;
-    /* height: 25px; */
-}
-.main .con .inputCon input[type="submit"]{
-    flex:1;
-    margin-left: 10px;
+.main .con .bu .span1 {
+    flex: 1;
+    width: 200px;
     height: 30px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    position: absolute;
+    top: 0;
+}
+.main .con .bu .span1 #item_name{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.main .con .bu .span2{
+    flex: 1;
+    width: 100px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: calc(100% - 100px);
+}
+.main .con .bu .span2 #add{
+    width: 100%;
+    height: 100%;
 }
