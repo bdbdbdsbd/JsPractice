@@ -68,3 +68,37 @@ players5[2] ='le';
 copyers5[1] ='ca';
 console.log(players5,copyers5);
 //  ["sd", "sds", "le"] ["sd", "ca", "fg"]
+
+console.log("来看对象的拷贝");
+// 深拷贝
+const person ={
+    name: 'westwood',
+    age: 80
+}
+const cap = person;
+cap.age = 40;
+console.log(person);
+// 浅拷贝
+const cap2 = Object.assign({}, person, {age:39});
+console.log(cap2);
+console.log(person);
+// 浅拷贝
+const cap3 = {...person};
+
+// 糟糕的事情来了
+const wes = {
+    name : 'wes',
+    age : 100,
+    social:{
+        qq:"1234567",
+        tel:"7654321"
+    }
+}
+const wes2 = Object.assign({},wes);
+wes2.social.qq ="135";
+// 没错，变化了。social对象里面的是深拷贝，外面的age是浅拷贝
+console.log(wes.social.qq);
+
+
+// 完全的浅拷贝，因为都变成字符了
+const wes3 = JSON.parse(JSON.stringify(wes));
