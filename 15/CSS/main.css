@@ -47,13 +47,13 @@ body{
     width: 100%;
     font-size: 18px;
     font-family: 'Courier New', Courier, monospace;
-    border-bottom: 2px solid gray;
-    padding-bottom: 10px;
+
     margin-bottom: 0px;
 }
 .main .con .txt2 p{
     padding: 0;
     margin: 0;
+    border-bottom: 2px solid gray;
 }
 .main .con .inputCon{
     display: flex;
@@ -78,16 +78,18 @@ body{
 }
 .main .con .itemList .smallItem {
    display: flex;
-   border-bottom: 1px solid gray;
+   border-bottom: 2px solid gray;
 }
-
-
-  /*意思就是input 不占用空间了 
-  强行用一个白块来代替*/
+/*意思就是input 不占用空间了 
+ 强行用一个白块来代替*/
 .smallItem  label:before {
     content: "⬜️";
     margin-right: 10px;
  }
+
+ /* A+B{}这个+是选择相邻兄弟，称作“相邻兄弟选择器”，如果需要选择紧接在另一个元素后的元素，而且二者有相同的父元素，可以使用相邻兄弟选择器 */
+ /* input:checked + label:before 选择紧接在 input:checked 元素后出现的段落，input:checked 和 label:before 元素拥有共同的父元素 */
+  /* 相当于在checked的条件下进行 */
 .smallItem input:checked + label:before {
     content: "🌮";
 }
