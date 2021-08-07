@@ -69,3 +69,28 @@ body{
     margin-left: 10px;
     height: 30px;
 }
+.main .con .itemList li{
+    list-style: none;
+    font-size: 12px;
+    padding: 10px 0 4px 0;
+    flex: 1;
+    cursor: pointer;
+}
+.main .con .itemList .smallItem {
+   display: flex;
+   border-bottom: 1px solid gray;
+}
+
+
+  /*意思就是input 不占用空间了 
+  强行用一个白块来代替*/
+.smallItem  label:before {
+    content: "⬜️";
+    margin-right: 10px;
+ }
+.smallItem input:checked + label:before {
+    content: "🌮";
+}
+.smallItem input{
+    display: none;
+}
