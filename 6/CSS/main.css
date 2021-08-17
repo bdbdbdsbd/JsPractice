@@ -1,0 +1,70 @@
+body{
+    background-color: lightblue;
+    margin: 0;
+    padding: 0;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+.main{
+    width: 100%;
+    margin: 30px;
+    position: relative;
+}
+.main .con input{
+    display: block;
+    /* 使用margin这个居中必须是block */
+    margin: 0px auto;
+    width: 300px;
+    height: 50px;
+    border: 8px solid rgb(245, 242, 242);
+    font-size: 30px;
+    text-align: center;
+    z-index: 1;
+}
+.main ul{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0;
+    margin: 0;
+}
+.main ul li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 40px;
+    width: 250px;
+    line-height: 40px;
+    font-size: 10px;
+    color: #262626;
+    /* background-color: white; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+    padding: 10px;
+    display: flex;
+    /* 	justify-content space-between项目位于各行之间留有空白的容器内。
+    就是最大化利用空间的情况下均匀分布，这这里我觉得没用
+    与display flex一起用 */
+    justify-content: space-between;
+    /* capitalize文本中的每个单词以大写字母开头。 */
+    text-transform: capitalize; 
+    border-bottom: 1px solid #D8D8D8;
+    z-index: -2;
+}
+.main ul li:nth-child(odd){
+    /* perspective会有一种真的立体的效果，把握住
+    数字越小越离谱，其实就是元素被查看位置的视图 */
+    /* 1/cos(3deg)=1.01 */
+    transform: perspective(100px) rotateX(-3deg) translateY(0px) scale(1.01);
+    /* 渐变的背景 */
+    background: linear-gradient(to top,  #ffffff 0%,#EFEFEF 100%);
+    z-index: -2;
+}
+.main ul li:nth-child(even) {
+    transform: perspective(100px) rotateX(3deg) translateY(0px) scale(1.01);
+    background: linear-gradient(to bottom,  #ffffff 0%,#EFEFEF 100%);
+    z-index: -2;
+  }
+.hl{
+      background: lightblue;
+  }

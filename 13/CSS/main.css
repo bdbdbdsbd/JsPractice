@@ -1,0 +1,39 @@
+body{
+    background-color: lightpink;
+}
+.imgl{
+    width: 300px;
+    height: 200px;
+    float: left;
+    margin: 10px;
+    margin-left: 0px;
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all .5s;
+    /* z-index: -1; */
+}
+.imgr{
+    width: 300px;
+    height: 200px;
+    float: right;
+    margin: 10px;
+    margin-right: 0px;
+    transform: translateX(50px);
+    opacity: 0;
+    transition: all .5s;
+    /* z-index: -1; */
+}
+img.active{
+    transform: translateX(0px);
+    opacity: 1;
+    transition: all .5s;
+}
+.main{
+    position: absolute;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 600px;
+     background-color: white;
+     margin: 50px;
+     padding: 20px;
+}

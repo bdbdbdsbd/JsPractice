@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(../IMG/1.jpg);
+    background-size: cover;
+}
+.clock_face{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 400px;
+    border: 10px solid rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.clock_face .hand{
+    position: absolute;
+    left: calc( 50% - 50px );
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(0deg);
+    width: 100px;
+    height: 4px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 2px;
+    /* 不加 transition 就不会鬼畜*/
+    /* transition: 0.02s all ease-in-out; */
+    /* 可以加timming function，但是我没加 */
+}
+.clock_face .hour_hand{
+    left: calc( 50% - 50px );
+    width: 100px;
+    height: 6px;
+    transform-origin: right;
+    transform:  translateX(-50%) rotate(90deg);
+}
+.clock_face .min_hand{
+    left: calc( 50% - 70px );
+    width: 140px;
+    height: 5px;
+    transform-origin: right;
+    transform:  translateX(-50%) rotate(90deg);
+}
+.clock_face .second_hand{
+    left: calc( 50% - 90px );
+    width: 180px;
+    height: 4px;
+    transform-origin: right;
+    transform:  translateX(-50%) rotate(90deg);
+    /* transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1); */
+}

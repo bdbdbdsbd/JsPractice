@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../IMG/1.jpg);
+    background-size: cover;
+}
+.main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.main i{
+    /* width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+    position: absolute;
+    left: 50%;
+    top: -60px;
+    transform: translate(-50%);
+    font-size: 40px;
+    color: white;
+    border-radius: 50%;
+    border: 3px solid white;
+    text-align: center;
+    padding: 10px;
+}
+
+.main .con{
+    background-color: rgba(255, 255, 255, 0.7);
+    /* width: 400px; */
+    width: 400px;
+    /* height: 300px; */
+    margin: 30px;
+    box-shadow: 0 0 2px 10px rgba(0, 0, 0, 0.3);
+    padding: 5px 30px;
+}
+.main .con .txt{
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main .con .txt2{
+    width: 100%;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+
+    margin-bottom: 0px;
+}
+.main .con .txt2 p{
+    padding: 0;
+    margin: 0;
+    border-bottom: 2px solid gray;
+}
+.main .con .inputCon{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.main .con .inputCon input[type="text"]{
+    flex:2;
+    /* height: 25px; */
+}
+.main .con .inputCon input[type="submit"]{
+    flex:1;
+    margin-left: 10px;
+    height: 30px;
+}
+.main .con .itemList li{
+    list-style: none;
+    font-size: 12px;
+    padding: 10px 0 4px 0;
+    flex: 1;
+    cursor: pointer;
+}
+.main .con .itemList .smallItem {
+   display: flex;
+   border-bottom: 2px solid gray;
+}
+/*意思就是input 不占用空间了 
+ 强行用一个白块来代替*/
+.smallItem  label:before {
+    content: "⬜️";
+    margin-right: 10px;
+ }
+
+ /* A+B{}这个+是选择相邻兄弟，称作“相邻兄弟选择器”，如果需要选择紧接在另一个元素后的元素，而且二者有相同的父元素，可以使用相邻兄弟选择器 */
+ /* input:checked + label:before 选择紧接在 input:checked 元素后出现的段落，input:checked 和 label:before 元素拥有共同的父元素 */
+  /* 相当于在checked的条件下进行 */
+.smallItem input:checked + label:before {
+    content: "🌮";
+}
+.smallItem input{
+    display: none;
+}

@@ -1,0 +1,91 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.main{
+    height: 100vh;
+    display: flex;
+}
+.part{
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    /* 纵向排列 */
+    flex-direction: column;
+    transition: 0.5s ease-in-out;
+}
+/* align-items: center;
+    justify-content: center;
+    是相对于本模块来说的
+    的使用前提是本模块有
+     display: flex;
+    flex：...的应用前提是上一个模块有display: flex;
+    */
+.part > *{
+    /* 这个auto不太明显啊 */
+    /* 1 0 就是放大不缩小，占满整个区域 */
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.part1{
+    background-image: url(../IMG/a.jpg);
+}
+.part2{
+    background-image: url(../IMG/b.jpg);
+}
+.part3{
+    background-image: url(../IMG/c.jpg);
+}
+.part4{
+    background-image: url(../IMG/d.jpg);
+}
+.part5{
+    background-image: url(../IMG/e.jpg);
+}
+.part p{
+    font-size: 2em;
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+.part p:nth-child(2){
+    font-size: 4em;
+}
+.part p:nth-child(1){
+    transform: translateY(-100%);
+    transition: 0.5s;
+}
+.part p:nth-child(3){
+    transform: translateY(100%);
+    transition: 0.5s;
+}
+.open{
+    flex: 4;
+    transition: 0.5s;
+}
+.open p:nth-child(1){
+    transform: translateY(0%);
+    font-size: 50px;
+    transition: 0.5s;
+}
+.open p:nth-child(3){
+    transform: translateY(0%);
+    font-size: 50px;
+    transition: 0.5s;
+}
+.open p:nth-child(2){
+    font-size: 100px;
+    transition: 0.5s;
+}
+
+/* 当页面小于960px的时候执行它下面的CSS */
+@media only screen and (max-width: 600px) {
+    .part p {
+      font-size: 0.5em;
+    }
+  }

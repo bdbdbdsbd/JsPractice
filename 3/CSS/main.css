@@ -1,0 +1,41 @@
+/* :root是一个伪类，表示文档根元素，非IE及ie8及以上浏览器都支持，在:root中声明相当于全局属性，只要当前页面引用了:root segment所在文件，都可以使用var()来引用 */
+:root{
+    --base:#262626;
+    --spacing:20px;
+    --blur:0px;
+}
+body{
+    background-color: #262626;
+}
+.main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* background-image: url(../IMG/1.jpg); */
+    /* background-size: cover; */
+    padding: var(--spacing);
+    margin: var(--spacing);
+    /* margin: 40px; */
+    background-color: var( --base);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+}
+.main img{
+    width: 800px;
+    height: 500px;
+    filter: blur(var(--blur));
+}
+.top{
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+}
+.top span{
+    color: var( --base);
+}
+.top #color{
+    height: 25px;
+    width: 80px;
+    /* background-color: var(--base); */
+}

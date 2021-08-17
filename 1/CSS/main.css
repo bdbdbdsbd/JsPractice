@@ -1,0 +1,60 @@
+body{
+    background:url(../IMG/6.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.keys{
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    min-width: 100vh;  */
+    /* 这里更适合用弹性布局 */
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.keys .key{
+    float: left;
+    width: 80px;
+    height: 70px;
+    margin: 20px;
+    border: 5px #262626 solid;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    padding: 20px 10px 10px;
+    transform: scale(1);
+    transition: all .05s ease ;
+    background-color: rgba(0,0,0,0.2);
+    box-shadow: 0 0 3px rgba(0,0,0,0.6);
+}
+.keys .key kbd{
+    font-size: 2.5EM;
+    text-align: center;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+    color: #262626;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.keys .key .text{
+    font-size: 0.5EM;
+    color: #ffc600;
+    text-transform: uppercase;
+    /* 置文本字符的间距表现 */
+    letter-spacing: .1rem;
+}
+/* 必须加.keys，提高优先级
+否则不会出现transform体积变大的情况
+那么playing就不会消失 */
+.keys .playing{
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+}
+      
